@@ -1,12 +1,22 @@
-# React + Vite
+# 🔍 DSA.CO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is designed as a personal learning tool for practicing **Data Structures and Algorithms (DSA)**, while also improving front-end skills using **TailwindCSS** and **ReactJS**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📘 Explore and visualize popular algorithms
+- 🧠 Practice DSA problems categorized by difficulty and topic
+- 💡 Clean and responsive UI built with TailwindCSS
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ **ReactJS** – Frontend framework for building UI components
+- 🎨 **TailwindCSS** – Utility-first CSS framework for styling
+- ⭐ **FontAwesome** – Icons for enhanced user experience
+
+## 📚 Learning Goals
+
+- Strengthen understanding of core **DSA concepts**
+- Practice real-world **problem solving**
+- Improve **ReactJS** component design and **state management**
+- Build responsive layouts using **TailwindCSS**
