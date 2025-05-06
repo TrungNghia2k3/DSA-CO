@@ -5,7 +5,7 @@ import AlgorithmDetail from './pages/AlgorithmDetail';
 import QuestionDetail from './pages/QuestionDetail';
 import Navbar from './components/Navbar';
 import Breadcrumb from './components/Breadcrumb';
-import {questions} from './assets/data/data';
+import {questions} from './assets/data/questions.js';
 
 const App = () => {
     const [page, setPage] = useState('home');

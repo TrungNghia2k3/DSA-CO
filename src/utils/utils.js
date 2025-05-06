@@ -20,5 +20,3 @@ export const sortAlphabetically = (array) => {
         return aStr.localeCompare(bStr);
     });
 };
-
-

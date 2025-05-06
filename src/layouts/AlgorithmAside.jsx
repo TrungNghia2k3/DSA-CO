@@ -1,5 +1,5 @@
 import React from 'react';
-import {categories} from "../assets/data/data";
+import {categories} from "../assets/data/categories.js";
 import {formatTitle} from "../utils/utils.js";
 
 const AlgorithmAside = ({onAlgorithmClick}) => {

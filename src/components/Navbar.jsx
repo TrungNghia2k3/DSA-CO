@@ -6,7 +6,7 @@ const Navbar = ({ navigateToPage, activePage }) => {
 
     return (
         <header>
-            <div className="bg-[#121418] text-[#fff9] w-full flex justify-center items-center">
+            <div className="bg-default text-[#fff9] w-full flex justify-center items-center">
                 <div className="w-[1300px] h-[70px] m-auto flex items-center gap-10">
                     <div className="text-2xl font-bold">
                         <button

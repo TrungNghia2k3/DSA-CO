@@ -1,2 +1,29 @@
 @import "tailwindcss";
 
+
+@layer utilities {
+    .text-default {
+        color: white;
+    }
+
+    .bg-default {
+        background-color: #121418;
+    }
+
+    .layout-default-bg {
+        background-color: #1F202A;
+    }
+}
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Remove underline from all Prism-styled spans (related react-syntax-highlighter library) */
+code span {
+    text-decoration: none !important;
+}
+
+
+
