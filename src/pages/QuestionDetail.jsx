@@ -2,7 +2,7 @@ import {questionComponents} from '../components/questions';
 
 const QuestionDetail = ({question}) => {
     const Component = questionComponents[question.title];
-
+    
     return (
         <div className="w-full flex flex-col items-center justify-center py-20">
             <div className="w-[1300px] flex flex-col">

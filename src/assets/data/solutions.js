@@ -129,5 +129,145 @@ class Solution {
         }
 };`
             },
+        },
+        remove_element: {
+            "brute_force": {
+                "cpp": `class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        vector<int> tmp;
+        for (int num : nums) {
+            if (num != val) {
+                tmp.push_back(num);
+            }
+        }
+        for (int i = 0; i < tmp.size(); i++) {
+            nums[i] = tmp[i];
+        }
+        return tmp.size();
+    }
+};`,
+                "java": `public class Solution {
+    public int removeElement(int[] nums, int val) {
+        List<Integer> tmp = new ArrayList<>();
+        for (int num : nums) {
+            if (num != val) {
+                tmp.add(num);
+            }
+        }
+        for (int i = 0; i < tmp.size(); i++) {
+            nums[i] = tmp.get(i);
+        }
+        return tmp.size();
+    }
+}`,
+                "javascript": `class Solution {
+    /**
+     * @param {number[]} nums
+     * @param {number} val
+     * @return {number}
+     */
+    removeElement(nums, val) {
+        const tmp = [];
+        for (const num of nums) {
+            if (num !== val) {
+                tmp.push(num);
+            }
+        }
+        for (let i = 0; i < tmp.length; i++) {
+            nums[i] = tmp[i];
+        }
+        return tmp.length;
+    }
+}`
+            },
+            "two_pointers_i": {
+                "cpp": `class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int k = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != val) {
+                nums[k++] = nums[i];
+            }
+        }
+        return k;
+    }
+};`,
+                "java": `public class Solution {
+    public int removeElement(int[] nums, int val) {
+        int k = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[k++] = nums[i];
+            }
+        }
+        return k;
+    }
+}`,
+                "javascript": `class Solution {
+    /**
+     * @param {number[]} nums
+     * @param {number} val
+     * @return {number}
+     */
+    removeElement(nums, val) {
+        let k = 0;
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] !== val) {
+                nums[k++] = nums[i];
+            }
+        }
+        return k;
+    }
+}`
+            },
+            "two_pointers_ii": {
+                "cpp": `class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int i = 0, n = nums.size();
+        while (i < n) {
+            if (nums[i] == val) {
+                nums[i] = nums[--n];
+            } else {
+                i++;
+            }
+        }
+        return n;
+    }
+};`,
+                "java": `public class Solution {
+    public int removeElement(int[] nums, int val) {
+        int i = 0, n = nums.length;
+        while (i < n) {
+            if (nums[i] == val) {
+                nums[i] = nums[--n];
+            } else {
+                i++;
+            }
+        }
+        return n;
+    }
+}`,
+                "javascript": `class Solution {
+    /**
+     * @param {number[]} nums
+     * @param {number} val
+     * @return {number}
+     */
+    removeElement(nums, val) {
+        let i = 0, n = nums.length;
+        while (i < n) {
+            if (nums[i] == val) {
+                nums[i] = nums[--n];
+            } else {
+                i++;
+            }
+        }
+        return n;
+    }
+}`
+            }
         }
     }

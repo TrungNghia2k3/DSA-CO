@@ -5,8 +5,6 @@ import AlgorithmAside from "../layouts/AlgorithmAside.jsx"; // Make sure the pat
 const AlgorithmDetail = ({name, onAlgorithmClick}) => {
     const Component = algorithmComponents[name]; // Get the component for the selected algorithm
 
-    console.log("Name:", name);
-
     return (
         <section className="w-full flex flex-col justify-between px-30 py-20">
             <div className="flex gap-5">

@@ -84,5 +84,31 @@ export const questions = {
             url: "https://interviewing.io/questions/two-sum",
             source: "Interviewing.io"
         }
-    ]
+    ],
+    remove_duplicates: [
+        {
+            title: "Remove Duplicates from Sorted Array",
+            url: "https://www.geeksforgeeks.org/remove-duplicates-sorted-array/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "Remove Duplicates in-place from Sorted Array",
+            url: "https://takeuforward.org/data-structure/remove-duplicates-in-place-from-sorted-array/",
+            source: "TakeUForward"
+        }
+    ],
+    remove_element: [
+        {
+            title: "Remove Element - Explanation",
+            url: "https://neetcode.io/solutions/remove-element",
+            source: "NeetCode"
+        }
+    ],
+    search_insert_position: [
+        {
+            title: "Search insert position of K in a sorted array",
+            url: "https://www.geeksforgeeks.org/search-insert-position-of-k-in-a-sorted-array/",
+            source: "LeetCode"
+        }
+    ],
 }

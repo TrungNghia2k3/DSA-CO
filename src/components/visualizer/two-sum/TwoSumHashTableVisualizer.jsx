@@ -12,7 +12,7 @@ const TwoSumVisualizer = () => {
 
     const runTwoSum = async () => {
         setRunning(true);
-        setStatus({color: '', string: '🔍 Searching for pair...'});
+        setStatus({color: '', string: ''});
         setFoundPair([]);
         const numToIndex = {};
 
@@ -23,7 +23,7 @@ const TwoSumVisualizer = () => {
             setStatus({color: 'text-yellow-500', string: `🔎 Checking ${current}, looking for ${complement}`});
             await sleep(1000);
 
-            if (numToIndex.hasOwnProperty(complement)) {
+            if (Object.prototype.hasOwnProperty.call(numToIndex, complement)) {
                 setFoundPair([numToIndex[complement], i]);
                 setStatus({
                     color: 'text-green-600',
@@ -54,7 +54,7 @@ const TwoSumVisualizer = () => {
                     type="text"
                     value={nums.join(',')}
                     onChange={handleInputChange}
-                    className="w-full p-2 border rounded"
+                    className="w-full p-2 border rounded outline-none focus:outline-none"
                     disabled={running}
                 />
             </div>
@@ -65,7 +65,7 @@ const TwoSumVisualizer = () => {
                     type="number"
                     value={target}
                     onChange={(e) => setTarget(parseInt(e.target.value, 10))}
-                    className="w-full p-2 border rounded"
+                    className="w-full p-2 border rounded outline-none focus:outline-none"
                     disabled={running}
                 />
             </div>
@@ -85,7 +85,7 @@ const TwoSumVisualizer = () => {
                     return (
                         <div
                             key={idx}
-                            className={`p-3 border rounded
+                            className={`p-3 rounded
                                     ${isFound ?
                                 'bg-green-600'
                                 : isCurrent

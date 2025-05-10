@@ -14,7 +14,7 @@ import React from 'react';
 // The browser looks for an element with id="example" and scrolls to it automatically. This is standard HTML behavior — no JavaScript needed.
 
 const TableOfContents = ({items}) => (
-    <nav className="mb-6 p-4 rounded">
+    <nav className="mb-6 py-4 rounded">
         <h3 className="font-semibold text-xl mb-2">Table of Contents</h3>
         <ul className="list-disc list-inside space-y-1">
             {items.map(({id, title}) => (

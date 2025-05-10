@@ -3,9 +3,9 @@ import ExampleList from "../ExampleList.jsx";
 import ConstraintsBullet from "../ConstraintsBullet.jsx";
 import TableOfContents from "../TableOfContents.jsx";
 import Heading from "../Heading.jsx";
-import TwoSumBruteForceVisualizer from "../visualizer/TwoSumBruteForceVisualizer.jsx";
+import TwoSumBruteForceVisualizer from "../visualizer/two-sum/TwoSumBruteForceVisualizer.jsx";
 import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
-import TwoSumHashTableVisualizer from "../visualizer/TwoSumHashTableVisualizer.jsx";
+import TwoSumHashTableVisualizer from "../visualizer/two-sum/TwoSumHashTableVisualizer.jsx";
 import CodeBlock from "../CodeBlock.jsx";
 
 import {images} from "../../assets/data/images.js";
