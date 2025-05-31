@@ -22,6 +22,23 @@ export const algorithms = {
             source: "MDN Web Docs"
         }
     ],
+    linkedList: [
+        {
+            title: "DSA Linked Lists",
+            url: "https://www.w3schools.com/dsa/dsa_theory_linkedlists.php",
+            source: "W3Schools"
+        },
+        {
+            title: "Linked List Data Structure",
+            url: "https://www.geeksforgeeks.org/linked-list-data-structure/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "Introduction to Linked List – Data Structure and Algorithm Tutorials",
+            url: "https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure/",
+            source: "GeeksforGeeks"
+        }
+    ],
     string: [
         {
             title: "What is String in JavaScript?",
@@ -69,6 +86,76 @@ export const algorithms = {
             url: "https://www.geeksforgeeks.org/what-is-hashing/",
             source: "GeeksforGeeks"
         }
+    ],
+    stack: [
+        {
+            title: "Stack Data Structure",
+            url: "https://www.geeksforgeeks.org/stack-data-structure/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "DSA Stacks",
+            url: "https://www.w3schools.com/dsa/dsa_data_stacks.php",
+            source: "W3Schools"
+        },
+        {
+            title: "Difference Between Stack and Queue Data Structures",
+            url: "https://www.geeksforgeeks.org/difference-between-stack-and-queue-data-structures/",
+            source: "GeeksforGeeks"
+        }
+    ],
+    queue: [
+        {
+            title: "Queue Data Structure",
+            url: "https://www.geeksforgeeks.org/queue-data-structure/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "DSA Queues",
+            url: "https://www.w3schools.com/dsa/dsa_data_queues.php",
+            source: "W3Schools"
+        }
+    ],
+    binary_search: [
+        {
+            title: "Binary Search Algorithm",
+            url: "https://www.geeksforgeeks.org/binary-search-algorithm/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "Binary Search in JavaScript",
+            url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort",
+            source: "MDN Web Docs"
+        }
+    ],
+    bubble_sort: [
+        {
+            title: "Bubble Sort Algorithm",
+            url: "https://www.geeksforgeeks.org/bubble-sort-algorithm/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "Bubble Sort in JavaScript",
+            url: "https://www.freecodecamp.org/news/bubble-sort-in-javascript/",
+            source: "freeCodeCamp"
+        }
+    ],
+    recursion: [
+        {
+            title: "Recursion in JavaScript",
+            url: "https://www.freecodecamp.org/news/recursion-in-javascript/",
+            source: "freeCodeCamp"
+        },
+        {
+            title: "Understanding Recursion",
+            url: "https://www.geeksforgeeks.org/understanding-recursion/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "Recursion Explained with Examples",
+            url: "https://www.educative.io/edpresso/recursion-explained-with-examples",
+            source: "Educative"
+        }
     ]
 };
 
@@ -110,5 +197,17 @@ export const questions = {
             url: "https://www.geeksforgeeks.org/search-insert-position-of-k-in-a-sorted-array/",
             source: "LeetCode"
         }
+    ],
+    merge_two_sorted_lists: [
+        {
+            title: "Merge two sorted linked lists",
+            url: "https://www.geeksforgeeks.org/merge-two-sorted-linked-lists/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "Merge two sorted lists (in-place)",
+            url: "https://www.geeksforgeeks.org/merge-two-sorted-lists-place/",
+            source: "GeeksforGeeks"
+        },
     ],
 }

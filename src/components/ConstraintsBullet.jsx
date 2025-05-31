@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ConstraintsBullet = ({constraints = []}) => {
     const formatMathExpression = (text) => {
         const regex = /(10\^(\d+)|-10\^(\d+))/g;

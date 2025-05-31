@@ -1,5 +1,3 @@
-import React from 'react';
-
 const BlockQuote = ({heading, quote, centered = false, italic = false}) => {
     return (
         <div className="mb-3">

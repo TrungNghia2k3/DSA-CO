@@ -4,7 +4,7 @@ import {formatTitle} from "../utils/utils.js";
 
 const AlgorithmAside = ({onAlgorithmClick}) => {
     return (
-        <aside className="bg-[#1F202A] text-white rounded-lg p-10">
+        <aside className="layout-default-bg text-white rounded-lg p-10">
             {Object.keys(categories).map((category, index) => (
                 <div key={index} className="mb-4">
                     <h3 className="text-lg font-bold mb-2">{formatTitle(category)}</h3>

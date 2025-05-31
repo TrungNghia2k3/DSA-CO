@@ -1,20 +1,42 @@
 // images.js
-import arrayImage0 from "../image/array.png";
-import arrayImage1 from "../image/array-1.png";
-import arrayImage2 from "../image/array-2.png";
-import arrayImage3 from "../image/array-3.png";
-import arrayImage4 from "../image/array-4.png";
-import arrayImage5 from "../image/array-5.png";
-import arrayImage6 from "../image/array-6.png";
-import arrayImage7 from "../image/array-7.png";
-import arrayImage8 from "../image/array-8.png";
+import arrayImage0 from "../image/algorithm/array.png";
+import arrayImage1 from "../image/algorithm/array-1.png";
+import arrayImage2 from "../image/algorithm/array-2.png";
+import arrayImage3 from "../image/algorithm/array-3.png";
+import arrayImage4 from "../image/algorithm/array-4.png";
+import arrayImage5 from "../image/algorithm/array-5.png";
+import arrayImage6 from "../image/algorithm/array-6.png";
+import arrayImage7 from "../image/algorithm/array-7.png";
+import arrayImage8 from "../image/algorithm/array-8.png";
 
-import hashTable0 from "../image/hash-table.png";
-import hashTable1 from "../image/hash-table-1.png";
+import linkedListImage0 from "../image/algorithm/linked-list.png";
+import linkedListImage1 from "../image/algorithm/linked-list-1.png";
+import linkedListImage2 from "../image/algorithm/linked-list-2.png";
+import linkedListImage3 from "../image/algorithm/linked-list-3.png";
+import linkedListImage4 from "../image/algorithm/linked-list-4.png";
+import linkedListImage5 from "../image/algorithm/linked-list-5.png";
+import linkedListImage6 from "../image/algorithm/linked-list-6.png";
 
-import hashingImage0 from "../image/hashing.png";
-import hashingImage1 from "../image/hashing-1.png";
-import hashingImage2 from "../image/hashing-2.png";
+import hashTable0 from "../image/algorithm/hash-table.png";
+import hashTable1 from "../image/algorithm/hash-table-1.png";
+
+import hashingImage0 from "../image/algorithm/hashing.png";
+import hashingImage1 from "../image/algorithm/hashing-1.png";
+import hashingImage2 from "../image/algorithm/hashing-2.png";
+
+import stackImage0 from "../image/algorithm/stack.png";
+import stackImage1 from "../image/algorithm/stack-1.png";
+import stackImage2 from "../image/algorithm/stack-2.png";
+import stackImage3 from "../image/algorithm/stack-3.png";
+import stackImage4 from "../image/algorithm/stack-4.png";
+import stackImage5 from "../image/algorithm/stack-5.png";
+import stackImage6 from "../image/algorithm/stack-6.png";
+
+import mergeTwoSortedListsImage0 from "../image/problem/merge-two-sorted-lists.png";
+
+import bubbleSortImage0 from "../image/algorithm/bubble-sort-1.png";
+import bubbleSortImage1 from "../image/algorithm/bubble-sort-2.png";
+import bubbleSortImage2 from "../image/algorithm/bubble-sort-3.png";
 
 export const images = {
     array: {
@@ -28,6 +50,15 @@ export const images = {
         "image 7": arrayImage7,
         "image 8": arrayImage8,
     },
+    linked_list: {
+        "image 0": linkedListImage0,
+        "image 1": linkedListImage1,
+        "image 2": linkedListImage2,
+        "image 3": linkedListImage3,
+        "image 4": linkedListImage4,
+        "image 5": linkedListImage5,
+        "image 6": linkedListImage6,
+    },
     hash_table: {
         "image 0": hashTable0,
         "image 1": hashTable1,
@@ -36,6 +67,25 @@ export const images = {
         "image 0": hashingImage0,
         "image 1": hashingImage1,
         "image 2": hashingImage2,
+    },
+    stack: {
+        "image 0": stackImage0,
+        "image 1": stackImage1,
+        "image 2": stackImage2,
+        "image 3": stackImage3,
+        "image 4": stackImage4,
+        "image 5": stackImage5,
+        "image 6": stackImage6,
+    },
+    bubble_sort: {
+        "image 0": bubbleSortImage0,
+        "image 1": bubbleSortImage1,
+        "image 2": bubbleSortImage2,
     }
-
 };
+
+export const imagesProblem = {
+    "Merge Two Sorted Lists": {
+        "image 0": mergeTwoSortedListsImage0,
+    }
+}

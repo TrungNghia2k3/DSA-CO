@@ -270,6 +270,130 @@ let arr = [ 'a', 'b', 'c', 'd', 'e' ];
 let arr = [ 1.4, 2.0, 24, 5.0, 0.0 ];`
         }
     },
+    "bubbleSort": {
+        "example 1": {
+            "cpp": `#include <bits/stdc++.h>
+using namespace std;
+
+// An optimized version of Bubble Sort 
+void bubbleSort(vector<int>& arr) {
+    int n = arr.size();
+    bool swapped;
+  
+    for (int i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+      
+        // If no two elements were swapped, then break
+        if (!swapped)
+            break;
+    }
+}
+
+// Function to print a vector
+void printVector(const vector<int>& arr) {
+    for (int num : arr)
+        cout << " " << num;
+}
+
+int main() {
+    vector<int> arr = { 64, 34, 25, 12, 22, 11, 90 };
+    bubbleSort(arr);
+    cout << "Sorted array: \\n";
+    printVector(arr);
+    return 0;
+}`,
+            "java": `// Optimized java implementation of Bubble sort
+import java.io.*;
+
+class GFG {
+    
+    // An optimized version of Bubble Sort
+    static void bubbleSort(int arr[], int n){
+        int i, j, temp;
+        boolean swapped;
+        for (i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    
+                    // Swap arr[j] and arr[j+1]
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+
+            // If no two elements were
+            // swapped by inner loop, then break
+            if (swapped == false)
+                break;
+        }
+    }
+
+    // Function to print an array
+    static void printArray(int arr[], int size){
+        int i;
+        for (i = 0; i < size; i++)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+
+    // Driver program
+    public static void main(String args[]){
+        int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+        int n = arr.length;
+        bubbleSort(arr, n);
+        System.out.println("Sorted array: ");
+        printArray(arr, n);
+    }
+}`,
+            "javascript": `// Optimized javaScript implementation
+// of Bubble sort
+function bubbleSort(arr, n){
+    var i, j, temp;
+    var swapped;
+    for (i = 0; i < n - 1; i++){
+        swapped = false;
+        for (j = 0; j < n - i - 1; j++){
+            if (arr[j] > arr[j + 1]) 
+            {
+                // Swap arr[j] and arr[j+1]
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                swapped = true;
+            }
+        }
+
+        // IF no two elements were 
+        // swapped by inner loop, then break
+        if (swapped == false)
+        break;
+    }
+}
+
+// Function to print an array 
+function printArray(arr, size){
+  var i;
+  for (i = 0; i < size; i++)
+      console.log(arr[i] + " ");
+}
+
+// Driver program
+var arr = [ 64, 34, 25, 12, 22, 11, 90 ];
+var n = arr.length;
+bubbleSort(arr, n);
+console.log("Sorted array: ");
+printArray(arr, n);`
+        }
+    }
 
     // Add more categories as needed
 };

@@ -1,13 +1,18 @@
-import React from 'react';
+import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
+
+// Components
 import Paragraph from "../Paragraph.jsx";
 import ExampleList from "../ExampleList.jsx";
 import ConstraintsBullet from "../ConstraintsBullet.jsx";
 import Bullet from "../Bullet.jsx";
 import TableOfContents from "../TableOfContents.jsx";
-import RemoveDuplicatesTwoPointersVisualizer from "../visualizer/remove-duplicates-from-sorted-array/RemoveDuplicatesTwoPointersVisualizer.jsx";
-import RemoveDuplicatesHashSetVisualizer from "../visualizer/remove-duplicates-from-sorted-array/RemoveDuplicatesHashSetVisualizer.jsx";
+
+// Visualizers
+import RemoveDuplicatesTwoPointersVisualizer from "../visualizer/problem/remove-duplicates-from-sorted-array/RemoveDuplicatesTwoPointersVisualizer.jsx";
+import RemoveDuplicatesHashSetVisualizer from "../visualizer/problem/remove-duplicates-from-sorted-array/RemoveDuplicatesHashSetVisualizer.jsx";
+
+// Assets
 import {questions} from "../../assets/data/references.js";
-import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
 
 const RemoveDuplicatesFromSortedArray = () => {
 

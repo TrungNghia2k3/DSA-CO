@@ -7,7 +7,7 @@ const QuestionCard = ({question, onClick}) => {
     return (
         <div
             onClick={onClick}
-            className="bg-[#1F202A] text-white p-4 rounded-lg cursor-pointer hover:bg-[#2a2b38]"
+            className="layout-default-bg text-white p-4 rounded-lg cursor-pointer hover:bg-[#2a2b38]"
         >
             <div className="flex items-center justify-between w-full">
                 <h3 className="text-xl font-bold">{id}. {title}</h3>

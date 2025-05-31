@@ -1,17 +1,21 @@
-import React from 'react';
+import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
+
+// Components
 import Paragraph from "../Paragraph.jsx";
 import ExampleList from "../ExampleList.jsx";
 import ConstraintsBullet from "../ConstraintsBullet.jsx";
 import TableOfContents from "../TableOfContents.jsx";
 import Heading from "../Heading.jsx";
-import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
-import {questions} from "../../assets/data/references.js";
-import SearchInsertBruteForceVisualizer from "../visualizer/search-insert-position/SearchInsertBruteForceVisualizer.jsx";
-import SearchInsertExpectedBinarySearchVisualizer
-    from "../visualizer/search-insert-position/SearchInsertExpectedBinarySearchVisualizer.jsx";
-import SearchInsertAlternateBinarySearchVisualizer
-    from "../visualizer/search-insert-position/SearchInsertAlternateBinarySearchVisualizer.jsx";
 
+// Visualizers
+import SearchInsertBruteForceVisualizer from "../visualizer/problem/search-insert-position/SearchInsertBruteForceVisualizer.jsx";
+import SearchInsertExpectedBinarySearchVisualizer
+    from "../visualizer/problem/search-insert-position/SearchInsertExpectedBinarySearchVisualizer.jsx";
+import SearchInsertAlternateBinarySearchVisualizer
+    from "../visualizer/problem/search-insert-position/SearchInsertAlternateBinarySearchVisualizer.jsx";
+
+// Assets
+import {questions} from "../../assets/data/references.js";
 
 const SearchInsertPosition = () => {
     const examples = [

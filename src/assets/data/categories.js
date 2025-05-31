@@ -13,8 +13,8 @@ export const categories = {
         "A* Pathfinding"
     ],
     data_structures: [
-        "Array",  "String","Binary Trees", "Linked Lists", "Hash Table", "Stack & Queue",
-        "AVL Trees", "Red-Black Trees", "Heaps", "Tries", "Sets & Maps"
+        "Array",  "String", "Binary Tree", "Linked List", "Hash Table", "Stack", "Queue",
+        "AVL Tree", "Red-Black Tree", "Heap", "Trie", "Set", "Map"
     ],
     techniques: [
         "Hashing", "Two Pointer", "Window Sliding", "Prefix Sum", "Recursion"

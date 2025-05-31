@@ -1,4 +1,3 @@
-import React from 'react';
 import {algorithmComponents} from '../components/algorithms'; // Correct this import as needed
 import AlgorithmAside from "../layouts/AlgorithmAside.jsx"; // Make sure the path is correct
 

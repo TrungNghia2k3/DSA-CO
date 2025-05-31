@@ -1,6 +1,6 @@
 const Breadcrumb = ({breadcrumb, onBreadcrumbClick}) => {
     return (
-        <div className="bg-[#1F202A] w-full flex items-center justify-center">
+        <div className="layout-default-bg w-full flex items-center justify-center">
             <div className="w-[1300px] text-white py-5">
                 <div className="text-sm mb-2">
                     {breadcrumb.map((item, index) => {

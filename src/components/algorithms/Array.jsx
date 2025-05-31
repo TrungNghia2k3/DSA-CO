@@ -1,19 +1,20 @@
-import React from 'react';
 import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection";
+
+// Components
 import Image from "../Image.jsx";
 import Heading from "../Heading.jsx";
 import Bullet from "../Bullet.jsx";
 import CodeBlock from "../CodeBlock.jsx";
-
-import {examples} from "../../assets/data/examples.js";
-import {algorithms} from "../../assets/data/references.js";
-import {images} from "../../assets/data/images.js";
-
-import Tittle from "../Tittle.jsx";
+import Title from "../Title.jsx";
 import Paragraph from "../Paragraph.jsx";
 import BlockQuote from "../BlockQuote.jsx";
 import SubHeading from "../SubHeading.jsx";
 import TableOfContents from "../TableOfContents.jsx";
+
+// Assets
+import {examples} from "../../assets/data/examples.js";
+import {algorithms} from "../../assets/data/references.js";
+import {images} from "../../assets/data/images.js";
 
 const Array = () => {
 
@@ -55,7 +56,7 @@ const Array = () => {
             </section>
 
 
-            <Tittle title={"Getting Started with Array Data Structure"}/>
+            <Title title={"Getting Started with Array Data Structure"}/>
 
             <Paragraph
                 content={"Array is a collection of items of the same variable type that are stored at contiguous memory locations. It is one of the most popular and simple data structures used in programming."}/>

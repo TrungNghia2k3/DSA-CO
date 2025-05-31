@@ -1,16 +1,21 @@
-import React from 'react';
+import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
+
+// Components
 import Paragraph from "../Paragraph.jsx";
 import Bullet from "../Bullet.jsx";
 import ExampleList from "../ExampleList.jsx";
 import ConstraintsBullet from "../ConstraintsBullet.jsx";
-import {questions} from "../../assets/data/references.js";
-import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
 import TableOfContents from "../TableOfContents.jsx";
 import CodeBlock from "../CodeBlock.jsx";
-import {solutions} from "../../assets/data/solutions.js";
 import Heading from "../Heading.jsx";
-import RemoveElementTwoPointersVisualizer from "../visualizer/remove-element/RemoveElementTwoPointersVisualizer.jsx";
-import RemoveElementBruteForceVisualizer from "../visualizer/remove-element/RemoveElementBruteForceVisualizer.jsx";
+
+// Visualizers
+import RemoveElementTwoPointersVisualizer from "../visualizer/problem/remove-element/RemoveElementTwoPointersVisualizer.jsx";
+import RemoveElementBruteForceVisualizer from "../visualizer/problem/remove-element/RemoveElementBruteForceVisualizer.jsx";
+
+// Assets
+import {solutions} from "../../assets/data/solutions.js";
+import {questions} from "../../assets/data/references.js";
 
 const RemoveElement = () => {
     const examples = [

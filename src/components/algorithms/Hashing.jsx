@@ -1,12 +1,15 @@
-import React from 'react';
+import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
+
+// Components
 import Paragraph from "../Paragraph.jsx";
 import Image from "../Image.jsx";
 import Heading from "../Heading.jsx";
 import Bullet from "../Bullet.jsx";
 
+// Assets
 import {images} from "../../assets/data/images.js";
 import {algorithms} from "../../assets/data/references.js";
-import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
+
 const Hashing = () => {
     return (
         <div>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Image = ({ imageURL, caption, link }) => {
     return (
         <div className="w-full flex flex-col items-center my-5">

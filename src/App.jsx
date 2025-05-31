@@ -1,10 +1,16 @@
 import React, {useState} from 'react';
+
+// Page
 import Home from './pages/Home';
 import Problem from './pages/Problem';
 import AlgorithmDetail from './pages/AlgorithmDetail';
 import QuestionDetail from './pages/QuestionDetail';
+
+// Component
 import Navbar from './components/Navbar';
 import Breadcrumb from './components/Breadcrumb';
+
+// Assets
 import {questions} from './assets/data/questions.js';
 
 const App = () => {
@@ -40,12 +46,12 @@ const App = () => {
                 setBreadcrumb(['Home', "Bubble Sort"]);
                 break;
             case 'algorithm-detail':
-                setSelectedAlgorithm(options.name || null);
+                setSelectedAlgorithm(options.name);
                 setPage('algorithm-detail');
                 setBreadcrumb(['Home', options.name]);
                 break;
             case 'question-detail':
-                setSelectedQuestion(options.question || null);
+                setSelectedQuestion(options.question);
                 setBreadcrumb(['Problem', options.question?.title || 'Question']);
                 break;
             default:

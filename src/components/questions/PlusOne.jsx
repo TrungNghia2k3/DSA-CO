@@ -1,4 +1,3 @@
-import React from 'react';
 import Paragraph from "../Paragraph.jsx";
 import ExampleList from "../ExampleList.jsx";
 import ConstraintsBullet from "../ConstraintsBullet.jsx";

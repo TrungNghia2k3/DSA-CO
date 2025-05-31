@@ -1,13 +1,16 @@
-import React from 'react';
+import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
+
+// Components
 import Heading from "../Heading.jsx";
 import Paragraph from "../Paragraph.jsx";
-import {images} from "../../assets/data/images.js";
 import Image from "../Image.jsx";
-import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
-import {algorithms} from "../../assets/data/references.js";
 import Bullet from "../Bullet.jsx";
 import CodeBlock from "../CodeBlock.jsx";
+
+// Assets
 import {examples} from "../../assets/data/examples.js";
+import {algorithms} from "../../assets/data/references.js";
+import {images} from "../../assets/data/images.js";
 
 const HashTable = () => {
     return (

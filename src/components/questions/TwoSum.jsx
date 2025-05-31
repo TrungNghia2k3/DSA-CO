@@ -1,17 +1,21 @@
+import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
+
+// Components
 import Paragraph from "../Paragraph.jsx";
 import ExampleList from "../ExampleList.jsx";
 import ConstraintsBullet from "../ConstraintsBullet.jsx";
 import TableOfContents from "../TableOfContents.jsx";
 import Heading from "../Heading.jsx";
-import TwoSumBruteForceVisualizer from "../visualizer/two-sum/TwoSumBruteForceVisualizer.jsx";
-import AlgorithmReferenceSection from "../../layouts/AlgorithmReferenceSection.jsx";
-import TwoSumHashTableVisualizer from "../visualizer/two-sum/TwoSumHashTableVisualizer.jsx";
 import CodeBlock from "../CodeBlock.jsx";
+import Bullet from "../Bullet.jsx";
 
-import {images} from "../../assets/data/images.js";
+// Visualizers
+import TwoSumBruteForceVisualizer from "../visualizer/problem/two-sum/TwoSumBruteForceVisualizer.jsx";
+import TwoSumHashTableVisualizer from "../visualizer/problem/two-sum/TwoSumHashTableVisualizer.jsx";
+
+// Assets
 import {questions} from "../../assets/data/references.js";
 import {solutions} from "../../assets/data/solutions.js";
-import Bullet from "../Bullet.jsx";
 
 const TwoSum = () => {
 
@@ -23,8 +27,7 @@ const TwoSum = () => {
         },
         {
             input: 'nums = [3,2,4], target = 6',
-            output: '[1,2]',
-            // image: images.array["image 0"]
+            output: '[1,2]'
         },
         {
             input: 'nums = [3,3], target = 6',
