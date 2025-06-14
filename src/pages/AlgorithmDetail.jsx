@@ -1,4 +1,4 @@
-import {algorithmComponents} from '../components/algorithms'; // Correct this import as needed
+import {algorithmComponents} from '../algorithms'; // Correct this import as needed
 import AlgorithmAside from "../layouts/AlgorithmAside.jsx"; // Make sure the path is correct
 
 const AlgorithmDetail = ({name, onAlgorithmClick}) => {

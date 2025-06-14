@@ -1,4 +1,4 @@
-import {questionComponents} from '../components/questions';
+import {questionComponents} from '../questions';
 
 const QuestionDetail = ({question}) => {
     const Component = questionComponents[question.title];
