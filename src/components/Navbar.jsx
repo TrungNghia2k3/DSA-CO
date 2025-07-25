@@ -1,7 +1,8 @@
 const Navbar = ({ navigateToPage, activePage }) => {
     const navItems = [
         { id: 'theory', label: 'Theory' },
-        { id: 'problem', label: 'Problem' }
+        { id: 'problem', label: 'Problem' },
+        { id: 'classic-problem', label: 'Classic Problems' }
     ];
 
     return (

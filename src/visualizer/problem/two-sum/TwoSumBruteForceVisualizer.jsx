@@ -109,7 +109,7 @@ const TwoSumBruteForceVisualizer = () => {
             </div>
 
             <button
-                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50text-white rounded "
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white rounded"
                 onClick={runSimulation}
                 disabled={running}
             >

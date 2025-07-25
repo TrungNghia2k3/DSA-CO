@@ -128,7 +128,6 @@ const TwoSum = () => {
                         ]}/>
             </section>
 
-
             <References references={questions.two_sum}/>
         </div>
     );

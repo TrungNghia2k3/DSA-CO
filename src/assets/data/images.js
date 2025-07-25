@@ -1,4 +1,4 @@
-// images.js
+// Algorithm images
 import arrayImage0 from "../image/algorithm/array.png";
 import arrayImage1 from "../image/algorithm/array-1.png";
 import arrayImage2 from "../image/algorithm/array-2.png";
@@ -32,11 +32,22 @@ import stackImage4 from "../image/algorithm/stack-4.png";
 import stackImage5 from "../image/algorithm/stack-5.png";
 import stackImage6 from "../image/algorithm/stack-6.png";
 
-import mergeTwoSortedListsImage0 from "../image/problem/merge-two-sorted-lists.png";
-
 import bubbleSortImage0 from "../image/algorithm/bubble-sort-1.png";
 import bubbleSortImage1 from "../image/algorithm/bubble-sort-2.png";
 import bubbleSortImage2 from "../image/algorithm/bubble-sort-3.png";
+
+import BackTrackingImage0 from "../image/algorithm/backtracking.png";
+
+// Problem images
+import mergeTwoSortedListsImage0 from "../image/problem/merge-two-sorted-lists.png";
+
+import validParenthesesImage1 from "../image/problem/valid-parentheses/valid-parentheses-1.png";
+import validParenthesesImage2 from "../image/problem/valid-parentheses/valid-parentheses-2.png";
+import validParenthesesImage3 from "../image/problem/valid-parentheses/valid-parentheses-3.png";
+import validParenthesesImage4 from "../image/problem/valid-parentheses/valid-parentheses-4.png";
+import validParenthesesImage5 from "../image/problem/valid-parentheses/valid-parentheses-5.png";
+import validParenthesesImage6 from "../image/problem/valid-parentheses/valid-parentheses-6.png";
+import validParenthesesImage7 from "../image/problem/valid-parentheses/valid-parentheses-7.png";
 
 export const images = {
     array: {
@@ -81,11 +92,23 @@ export const images = {
         "image 0": bubbleSortImage0,
         "image 1": bubbleSortImage1,
         "image 2": bubbleSortImage2,
+    },
+    backtracking: {
+        "image 0": BackTrackingImage0,
     }
 };
 
 export const imagesProblem = {
     "Merge Two Sorted Lists": {
         "image 0": mergeTwoSortedListsImage0,
+    }, 
+    "Valid Parentheses": {
+        "image 1": validParenthesesImage1,
+        "image 2": validParenthesesImage2,
+        "image 3": validParenthesesImage3,
+        "image 4": validParenthesesImage4,
+        "image 5": validParenthesesImage5,
+        "image 6": validParenthesesImage6,
+        "image 7": validParenthesesImage7,
     }
 }

@@ -14,6 +14,7 @@ import Queue from "./Queue.jsx";
 // Techniques
 import Hashing from "./Hashing.jsx";
 import Recursion from "./Recursion.jsx";
+import BackTracking from "./BackTracking.jsx";
 
 export const algorithmComponents = {
     // Sorting
@@ -34,5 +35,6 @@ export const algorithmComponents = {
     // Techniques
     'Hashing': Hashing,
     'Recursion': Recursion,
+    'Backtracking': BackTracking,
     // ... add others in the same format
 };

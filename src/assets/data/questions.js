@@ -4740,7 +4740,7 @@ export const questions = [
     },
     {
         "id": 470,
-        "title": "Implement Rand10() Using Rand7()",
+        "title": "Implement Rand10 Using Rand7",
         "difficulty": "medium",
         "category": [
             "math",

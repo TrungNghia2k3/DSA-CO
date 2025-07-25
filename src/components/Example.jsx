@@ -12,7 +12,10 @@ const Example = ({title, input, output, image, explanation}) => {
             )}
 
             {explanation && (
-                <p className="mt-2 text-gray-200"><span className="font-bold text-white">Explanation:</span> {explanation}</p>
+                <div className="mt-2 text-gray-200">
+                    <span className="font-bold text-white">Explanation:</span>
+                    <div className="mt-1 whitespace-pre-line">{explanation}</div>
+                </div>
             )}
         </div>
     );

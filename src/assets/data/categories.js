@@ -17,7 +17,8 @@ export const categories = {
         "AVL Tree", "Red-Black Tree", "Heap", "Trie", "Set", "Map"
     ],
     techniques: [
-        "Hashing", "Two Pointer", "Window Sliding", "Prefix Sum", "Recursion"
+        "Hashing", "Two Pointer", "Window Sliding", "Prefix Sum", "Recursion", "Backtracking",
+        "Dynamic Programming", "Greedy Algorithms", "Bit Manipulation", "Divide and Conquer", "Handling Duplicates"
     ]
 };
 

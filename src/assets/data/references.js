@@ -156,6 +156,23 @@ export const algorithms = {
             url: "https://www.educative.io/edpresso/recursion-explained-with-examples",
             source: "Educative"
         }
+    ], 
+    backtracking: [
+        {
+            title: "Backtracking Algorithm",
+            url: "https://www.geeksforgeeks.org/dsa/backtracking-algorithms/",
+            source: "GeeksforGeeks"
+        },
+        {
+            title: "Backtracking in JavaScript",
+            url: "https://www.freecodecamp.org/news/backtracking-in-javascript/",
+            source: "freeCodeCamp"
+        },
+        {
+            title: "Introduction to Backtracking",
+            url: "https://www.educative.io/edpresso/introduction-to-backtracking",
+            source: "Educative"
+        }
     ]
 };
 
@@ -210,4 +227,10 @@ export const questions = {
             source: "GeeksforGeeks"
         },
     ],
+    valid_parentheses: [
+        {
+            title: "Valid Parentheses in an Expression",
+            url: "https://www.geeksforgeeks.org/dsa/check-for-balanced-parentheses-in-an-expression/",
+            source: "GeeksforGeeks"
+        }],
 }
