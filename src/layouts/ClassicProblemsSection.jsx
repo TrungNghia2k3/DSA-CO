@@ -25,8 +25,8 @@ const ClassicProblemsSection = ({ onProblemClick }) => {
     const difficulties = ['All', 'Easy', 'Medium', 'Hard'];
 
     return (
-        <section className="py-20 w-full flex flex-col items-center justify-center bg-default">
-            <div className="max-w-[1300px] mx-auto px-5 w-full">
+        <section className="py-12 sm:py-16 lg:py-20 w-full flex flex-col items-center justify-center bg-default">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 {/* Header */}
                 <div className="text-center mb-12">
                     <div className="flex items-center justify-center mb-4">

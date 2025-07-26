@@ -84,13 +84,13 @@ const TwoSumBruteForceVisualizer = () => {
     };
 
     return (
-        <div className="py-4 max-w-xl">
-            <h2 className="text-xl font-bold mb-4">Two Sum Visualizer (Brute Force)</h2>
+        <div className="py-4 max-w-full sm:max-w-xl">
+            <h2 className="text-lg sm:text-xl font-bold mb-4">Two Sum Visualizer (Brute Force)</h2>
 
             <div className="mb-4">
-                <label className="block font-medium mb-1">Array (comma-separated):</label>
+                <label className="block font-medium mb-1 text-sm sm:text-base">Array (comma-separated):</label>
                 <input
-                    className="w-full p-2 border rounded outline-none focus:outline-none"
+                    className="w-full p-2 border rounded outline-none focus:outline-none text-sm sm:text-base"
                     value={numsInput}
                     onChange={(e) => setNumsInput(e.target.value)}
                     disabled={running}
@@ -98,10 +98,10 @@ const TwoSumBruteForceVisualizer = () => {
             </div>
 
             <div className="mb-4">
-                <label className="block mb-1">Target:</label>
+                <label className="block mb-1 text-sm sm:text-base">Target:</label>
                 <input
                     type="number"
-                    className="w-full p-2 border rounded outline-none focus:outline-none"
+                    className="w-full p-2 border rounded outline-none focus:outline-none text-sm sm:text-base"
                     value={target}
                     onChange={(e) => setTarget(e.target.value)}
                     disabled={running}
@@ -109,14 +109,14 @@ const TwoSumBruteForceVisualizer = () => {
             </div>
 
             <button
-                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white rounded"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white rounded text-sm sm:text-base"
                 onClick={runSimulation}
                 disabled={running}
             >
                 {running ? 'Running...' : 'Run'}
             </button>
 
-            <div className="mt-6 grid grid-cols-6 gap-2 text-center">
+            <div className="mt-6 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 text-center">
                 {numsInput.split(',').map((n, idx) => {
                     const isCurrent =
                         currentStep && (currentStep.i === idx || currentStep.j === idx);
@@ -125,7 +125,7 @@ const TwoSumBruteForceVisualizer = () => {
                     return (
                         <div
                             key={idx}
-                            className={`p-3 rounded ${
+                            className={`p-2 sm:p-3 rounded text-sm sm:text-base ${
                                 isFound
                                     ? 'bg-green-600'
                                     : isCurrent
@@ -141,13 +141,13 @@ const TwoSumBruteForceVisualizer = () => {
             </div>
 
             {foundPair && (
-                <div className="mt-4 text-green-600 font-semibold">
+                <div className="mt-4 text-green-600 font-semibold text-sm sm:text-base">
                     ✅ Found pair at indices [{foundPair[0]}, {foundPair[1]}]
                 </div>
             )}
 
             {!foundPair && !running && currentStep === null && (
-                <div className="mt-4 text-red-500 font-semibold">No pair found.</div>
+                <div className="mt-4 text-red-500 font-semibold text-sm sm:text-base">No pair found.</div>
             )}
         </div>
     );

@@ -68,8 +68,6 @@ const MergeTwoSortedLists = () => {
                     quote={"The idea is to merge two sorted linked lists using recursion. The base cases handle the scenarios where one of the lists is empty, in which case the other list is returned directly. In the recursive step, the function compares the data of the current nodes of both lists and attaches the smaller node to the merged list. The function then recursively merges the remaining part of the list. This process continues until both lists are fully merged. This approach eliminates the need for extra space and efficiently merges the lists."}
                     centered italic/>
 
-                <CodeBlock language={"cpp"} code={solutions.merge_two_sorted_lists.recursive_merge.cpp}/>
-
                 <CodeBlock language={"java"} code={solutions.merge_two_sorted_lists.recursive_merge.java}/>
 
                 <CodeBlock language={"javascript"} code={solutions.merge_two_sorted_lists.recursive_merge.javascript}/>
@@ -84,8 +82,6 @@ const MergeTwoSortedLists = () => {
                 <BlockQuote
                     quote={"The idea is to iteratively merge two sorted linked lists using a dummy node to simplify the process. A current pointer tracks the last node of the merged list. We compare the nodes from both lists and append the smaller node to the merged list. Once one list is fully traversed, the remaining nodes from the other list are appended. The merged list is returned starting from the node after the dummy node."}
                     centered italic/>
-
-                <CodeBlock language={"cpp"} code={solutions.merge_two_sorted_lists.iterative_merge.cpp}/>
 
                 <CodeBlock language={"java"} code={solutions.merge_two_sorted_lists.iterative_merge.java}/>
 

@@ -62,8 +62,6 @@ const RemoveElement = () => {
             <section id="remove-element-brute-force">
                 <Heading heading={"Approach 1: Brute Force"}/>
 
-                <CodeBlock language={"cpp"} code={solutions.remove_element.brute_force.cpp}/>
-
                 <CodeBlock language={"java"} code={solutions.remove_element.brute_force.java}/>
 
                 <CodeBlock language={"javascript"} code={solutions.remove_element.brute_force.javascript}/>
@@ -74,8 +72,6 @@ const RemoveElement = () => {
             <section id="remove-element-two-pointers-i">
                 <Heading heading={"Approach 2: Two Pointers I"}/>
 
-                <CodeBlock language={"cpp"} code={solutions.remove_element.two_pointers_i.cpp}/>
-
                 <CodeBlock language={"java"} code={solutions.remove_element.two_pointers_i.java}/>
 
                 <CodeBlock language={"javascript"} code={solutions.remove_element.two_pointers_i.javascript}/>
@@ -83,8 +79,6 @@ const RemoveElement = () => {
 
             <section id="remove-element-two-pointers-ii">
                 <Heading heading={"Approach 2: Two Pointers II"}/>
-
-                <CodeBlock language={"cpp"} code={solutions.remove_element.two_pointers_ii.cpp}/>
 
                 <CodeBlock language={"java"} code={solutions.remove_element.two_pointers_ii.java}/>
 

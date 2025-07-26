@@ -5,6 +5,7 @@ import Title from "../components/Title.jsx";
 import Image from "../components/Image.jsx";
 import CodeBlock from "../components/CodeBlock.jsx";
 import BlockQuote from "../components/BlockQuote.jsx";
+import Complexity from "../components/Complexity.jsx";
 
 // Assets
 import {examples} from "../assets/data/examples.js";
@@ -36,8 +37,6 @@ const BubbleSort = () => {
 
             <Title title={"Implementation of bubble sort"}/>
 
-            <CodeBlock language={"cpp"} code={examples.bubbleSort["example 1"].cpp}/>
-
             <CodeBlock language={"java"} code={examples.bubbleSort["example 1"].java}/>
 
             <CodeBlock language={"javascript"} code={examples.bubbleSort["example 1"].javascript}/>
@@ -48,11 +47,7 @@ const BubbleSort = () => {
 
             <Title title={"Complexity Analysis of Bubble Sort:"} />
 
-            <Bullet
-                items={[
-                    "Time Complexity: O(n^2)",
-                    "Auxiliary Space: O(1)"
-                ]}/>
+            <Complexity time="n^2" space="1" />
 
             <Title title={"Advantages of Bubble Sort:"} />
 
@@ -67,7 +62,7 @@ const BubbleSort = () => {
 
             <Bullet
                 items={[
-                    "Bubble sort has a time complexity of O(n2) which makes it very slow for large data sets.",
+                    "Bubble sort has a time complexity of O(n^2) which makes it very slow for large data sets.",
                     "Bubble sort has almost no or limited real world applications. It is mostly used in academics to teach different ways of sorting."
                 ]}/>
 

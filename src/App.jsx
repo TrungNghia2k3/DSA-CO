@@ -133,7 +133,7 @@ const App = () => {
                         onBreadcrumbClick={handleBreadcrumbClick}
                     />
                 )}
-                <div className="w-full m-auto bg-[#121418] text-white">
+                <div className="w-full m-auto bg-[#121418] text-white px-4 sm:px-6 lg:px-8">
                     <Routes>
                         <Route path="/" element={<Home onAlgorithmClick={handleAlgorithmClick} onClassicProblemClick={handleClassicProblemClick} />} />
                         <Route 

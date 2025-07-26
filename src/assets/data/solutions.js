@@ -2,27 +2,6 @@ export const solutions =
     {
         two_sum: {
             "brute_force": {
-                "cpp": `#include <vector>
-using namespace std;
-
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        // 1. Iterate over every possible number pair
-        for (int i = 0; i < nums.size(); i++) {
-            // j is always ahead of i so we don’t repeat pairs
-            for (int j = i + 1; j < nums.size(); j++) {
-                // 2. Check if a given pair adds up to the target
-                if (nums[i] + nums[j] == target) {
-                    // Return the indices of the two numbers
-                    return {i, j};
-                }
-            }
-        }
-        // If no pair is found, return an empty vector
-        return {};
-    }
-};`,
                 "java": `import java.util.HashMap;
 
 class Solution {
@@ -57,34 +36,6 @@ class Solution {
 };`
             },
             "hash_table": {
-                "cpp": `#include <vector>
-#include <unordered_map>
-using namespace std;
-
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        // Hash table to store number and its index
-        unordered_map<int, int> numToIndex;
-
-        // Iterate over the array
-        for (int i = 0; i < nums.size(); i++) {
-            int complement = target - nums[i];
-
-            // Check if the complement exists in the map
-            if (numToIndex.find(complement) != numToIndex.end()) {
-                return {numToIndex[complement], i};
-            }
-
-            // Store the number and its index
-            numToIndex[nums[i]] = i;
-        }
-
-        // If no solution found
-        return {};
-    }
-};
-`,
                 "java": `import java.util.HashMap;
 
 class Solution {
@@ -132,21 +83,6 @@ class Solution {
         },
         remove_element: {
             "brute_force": {
-                "cpp": `class Solution {
-public:
-    int removeElement(vector<int>& nums, int val) {
-        vector<int> tmp;
-        for (int num : nums) {
-            if (num != val) {
-                tmp.push_back(num);
-            }
-        }
-        for (int i = 0; i < tmp.size(); i++) {
-            nums[i] = tmp[i];
-        }
-        return tmp.size();
-    }
-};`,
                 "java": `public class Solution {
     public int removeElement(int[] nums, int val) {
         List<Integer> tmp = new ArrayList<>();
@@ -182,18 +118,6 @@ public:
 }`
             },
             "two_pointers_i": {
-                "cpp": `class Solution {
-public:
-    int removeElement(vector<int>& nums, int val) {
-        int k = 0;
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] != val) {
-                nums[k++] = nums[i];
-            }
-        }
-        return k;
-    }
-};`,
                 "java": `public class Solution {
     public int removeElement(int[] nums, int val) {
         int k = 0;
@@ -223,20 +147,6 @@ public:
 }`
             },
             "two_pointers_ii": {
-                "cpp": `class Solution {
-public:
-    int removeElement(vector<int>& nums, int val) {
-        int i = 0, n = nums.size();
-        while (i < n) {
-            if (nums[i] == val) {
-                nums[i] = nums[--n];
-            } else {
-                i++;
-            }
-        }
-        return n;
-    }
-};`,
                 "java": `public class Solution {
     public int removeElement(int[] nums, int val) {
         int i = 0, n = nums.length;
@@ -272,69 +182,6 @@ public:
         },
         merge_two_sorted_lists: {
             "recursive_merge": {
-                "cpp": `// C++ program to merge two sorted linked
-// lists recursively
-#include <bits/stdc++.h>
-using namespace std;
-
-class Node {
-public:
-    int data;
-    Node* next;
-
-    Node(int x) {
-        data = x;
-        next = nullptr;
-    }
-};
-
-// Function to merge two sorted linked lists recursively
-Node* sortedMerge(Node* head1, Node* head2) {
-
-    // Base cases
-    if (head1 == nullptr) 
-        return head2;
-    if (head2 == nullptr) 
-        return head1;
-
-    // Recursive merging based on smaller value
-    if (head1->data <= head2->data) {
-        head1->next = sortedMerge(head1->next, head2);
-        return head1;
-    } else {
-        head2->next = sortedMerge(head1, head2->next);
-        return head2;
-    }
-}
-
-// Function to print the linked list
-void printList(Node* curr) {
-    while (curr != nullptr) {
-        cout << curr->data;
-        if (curr->next != nullptr)
-            cout << " ";
-        curr = curr->next;
-    }
-    cout << endl;
-}
-
-int main() {
-  
-    // First linked list: 5 -> 10 -> 15
-    Node* head1 = new Node(5);
-    head1->next = new Node(10);
-    head1->next->next = new Node(15);
-
-    // Second linked list: 2 -> 3 -> 20
-    Node* head2 = new Node(2);
-    head2->next = new Node(3);
-    head2->next->next = new Node(20);
-
-    Node* res = sortedMerge(head1, head2);
-    printList(res);
-
-    return 0;
-}`,
                 "java": `// Java program to merge two sorted linked
 // lists recursively
 class Node {
@@ -450,87 +297,6 @@ let res = sortedMerge(head1, head2);
 printList(res);`
             },
             "iterative_merge": {
-                "cpp": `// C++ program to merge two sorted linked
-// lists iteratively
-#include <bits/stdc++.h>
-using namespace std;
-
-class Node {
-public:
-    int data;
-    Node* next;
-
-    Node(int x) {
-        data = x;
-        next = nullptr;
-    }
-};
-
-// Function to merge two sorted linked
-// lists iteratively
-Node* sortedMerge(Node* head1, Node* head2) {
-  
-    // Create a dummy node to simplify 
-    // the merging process
-    Node* dummy = new Node(-1);
-    Node* curr = dummy;
-
-    // Iterate through both linked lists
-    while (head1 != nullptr && head2 != nullptr) {
-      
-        // Add the smaller node to the merged list
-        if (head1->data <= head2->data) {
-            curr->next = head1;
-            head1 = head1->next;
-        } else {
-            curr->next = head2;
-            head2 = head2->next;
-        }
-        curr = curr->next;
-    }
-
-    // If any list is left, append it to
-    // the merged list
-    if (head1 != nullptr) {
-        curr->next = head1;
-    } else {
-        curr->next = head2;
-    }
-
-    // Return the merged list starting
-    // from the next of dummy node
-    return dummy->next;
-}
-
-void printList(Node* head) {
-  
-    while (head != nullptr) {
-        cout << head->data;
-        if (head->next != nullptr)
-            cout << " ";
-        head = head->next;
-    }
-    cout << endl;
-}
-
-int main() {
-  
-    // First linked list: 5 -> 10 -> 15 -> 40
-    Node* head1 = new Node(5);
-    head1->next = new Node(10);
-    head1->next->next = new Node(15);
-    head1->next->next->next = new Node(40);
-
-    // Second linked list: 2 -> 3 -> 20
-    Node* head2 = new Node(2);
-    head2->next = new Node(3);
-    head2->next->next = new Node(20);
-
-    Node* res = sortedMerge(head1, head2);
-    printList(res);
-
-    return 0;
-}`,
                 "java": `// Java program to merge two sorted linked 
 // lists iteratively
 class Node {
@@ -716,7 +482,21 @@ function isValid(s) {
     // If stack is empty, return true, otherwise false
     return st.length === 0;
 }`
-            }
+            },
+            "brute_force": {
+                "javascript": `/**
+     * @param {string} s
+     * @return {boolean}
+     */
+    isValid(s) {
+        while (s.includes("()") || s.includes("{}") || s.includes("[]")) {
+            s = s.replace("()", "");
+            s = s.replace("{}", "");
+            s = s.replace("[]", "");
+        }
+        return s === "";
+    }`
+            },
         },
         backspace_string_compare: {
             "stack": {

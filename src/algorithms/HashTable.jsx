@@ -57,8 +57,6 @@ const HashTable = () => {
                 "Robin Hood hashing: To reduce the length of the chain, collisions in Robin Hood hashing are addressed by switching off keys. The algorithm compares the distance between the slot and the occupied slot of the two keys if a new key hashes to an already-occupied slot. The existing key gets swapped out with the new one if it is closer to its ideal slot. This brings the existing key closer to its ideal slot. This method has a tendency to cut down on collisions and average chain length."
             ]}/>
 
-            <CodeBlock language={"cpp"} code={examples.hashTable["example 1"].cpp}/>
-
             <CodeBlock language={"java"} code={examples.hashTable["example 1"].java}/>
 
             <CodeBlock language={"javascript"} code={examples.hashTable["example 1"].javascript}/>

@@ -49,9 +49,22 @@ const Problem = ({ questions, onQuestionClick }) => {
     }, [filteredQuestions, currentPage]);
 
     return (
-        <div className="w-full flex flex-col justify-between px-30 py-20">
-            <div className="flex gap-5">
-                <div className="w-10/12 flex flex-col gap-3">
+        <div className="w-full flex flex-col justify-between px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
+            <div className="flex flex-col lg:flex-row gap-4 lg:gap-5">
+                {/* Filter Section - Top on mobile, Right on desktop */}
+                <div className="w-full lg:w-2/12 order-1 lg:order-2">
+                    <FilterQuestionAside
+                        selectedDifficulties={selectedDifficulties}
+                        onDifficultyChange={handleDifficultyChange}
+                        selectedCategories={selectedCategories}
+                        onCategoryChange={handleCategoryChange}
+                        search={search}
+                        onSearchChange={handleSearchChange}
+                    />
+                </div>
+
+                {/* Questions List - Bottom on mobile, Left on desktop */}
+                <div className="w-full lg:w-10/12 flex flex-col gap-3 order-2 lg:order-1">
                     {paginatedQuestions.map((question) => (
                         <QuestionCard
                             key={question.id}
@@ -80,17 +93,6 @@ const Problem = ({ questions, onQuestionClick }) => {
                             </button>
                         </div>
                     )}
-                </div>
-
-                <div className="w-2/12">
-                    <FilterQuestionAside
-                        selectedDifficulties={selectedDifficulties}
-                        onDifficultyChange={handleDifficultyChange}
-                        selectedCategories={selectedCategories}
-                        onCategoryChange={handleCategoryChange}
-                        search={search}
-                        onSearchChange={handleSearchChange}
-                    />
                 </div>
             </div>
         </div>

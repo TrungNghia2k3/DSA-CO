@@ -14,9 +14,9 @@ const QuestionDetail = ({ questions }) => {
     
     if (!question) {
         return (
-            <div className="w-full flex flex-col items-center justify-center py-20">
-                <div className="w-[1300px] flex flex-col">
-                    <h1 className="text-3xl font-bold mb-4">Question Not Found</h1>
+            <div className="w-full flex flex-col items-center justify-center py-8 sm:py-12 lg:py-20">
+                <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 flex flex-col">
+                    <h1 className="text-2xl sm:text-3xl font-bold mb-4">Question Not Found</h1>
                     <p>The requested question could not be found.</p>
                 </div>
             </div>
@@ -24,9 +24,9 @@ const QuestionDetail = ({ questions }) => {
     }
     
     return (
-        <div className="w-full flex flex-col items-center justify-center py-20">
-            <div className="w-[1300px] flex flex-col">
-                <h1 className="text-3xl font-bold mb-4">{question.title}</h1>
+        <div className="w-full flex flex-col items-center justify-center py-8 sm:py-12 lg:py-20">
+            <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 flex flex-col">
+                <h1 className="text-2xl sm:text-3xl font-bold mb-4">{question.title}</h1>
                 {Component ? <Component/> : <p>No component found for this question.</p>}
             </div>
         </div>

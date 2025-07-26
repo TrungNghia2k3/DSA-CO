@@ -67,8 +67,6 @@ const TwoSum = () => {
                 <Paragraph
                     content={"We can then easily check if a given pair adds up to our target. If it does then we have found our solution and we can return the two indices."}/>
 
-                <CodeBlock language={"cpp"} code={solutions.two_sum.brute_force.cpp}/>
-
                 <CodeBlock language={"java"} code={solutions.two_sum.brute_force.java}/>
 
                 <CodeBlock language={"javascript"} code={solutions.two_sum.brute_force.javascript}/>
@@ -112,8 +110,6 @@ const TwoSum = () => {
                             "Add the current number to our hash table The current number may sum up with another number that we have not yet evaluated. We can store the number in the hash table as a key with the index as the value for future checks."
                         ]}
                         type={"ol"}/>
-
-                <CodeBlock language={"cpp"} code={solutions.two_sum.hash_table.cpp}/>
 
                 <CodeBlock language={"java"} code={solutions.two_sum.hash_table.java}/>
 

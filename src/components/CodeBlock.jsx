@@ -14,19 +14,33 @@ const CodeBlock = ({language, code}) => {
 
     return (
         <>
-            <p className="font-bold capitalize text-green-400">{language === "cpp" ? "c++" : language}</p>
-            <div className="relative mb-5">
+            <p className="font-bold capitalize text-green-400 text-sm sm:text-base">{language}</p>
+            <div className="relative mb-5 overflow-hidden">
                 <button
                     onClick={handleCopy}
-                    className="absolute top-4 right-2 bg-gray-800 text-xs px-2 py-1 rounded hover:bg-gray-700">
+                    className="absolute top-2 sm:top-4 right-2 bg-gray-800 text-xs px-2 py-1 rounded hover:bg-gray-700 z-10">
                     {copied ? "Copied" : "Copy"}
                 </button>
-                <SyntaxHighlighter
-                    language={language}
-                    style={atomDark}
-                >
-                    {code}
-                </SyntaxHighlighter>
+                <div className="overflow-x-auto">
+                    <SyntaxHighlighter
+                        language={language}
+                        style={atomDark}
+                        customStyle={{
+                            fontSize: '0.875rem', // 14px
+                            lineHeight: '1.25rem', // 20px
+                            margin: 0,
+                            borderRadius: '0.375rem',
+                        }}
+                        codeTagProps={{
+                            style: {
+                                fontSize: 'inherit',
+                                lineHeight: 'inherit'
+                            }
+                        }}
+                    >
+                        {code}
+                    </SyntaxHighlighter>
+                </div>
             </div>
         </>
     );

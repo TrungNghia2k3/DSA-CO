@@ -15,8 +15,8 @@ const ClassicProblemDetail = () => {
     if (!problem || !ProblemComponent) {
         return (
             <div className="w-full min-h-screen bg-default text-white flex items-center justify-center">
-                <div className="w-[1300px] flex flex-col">
-                    <h1 className="text-3xl font-bold mb-4">Problem Not Found</h1>
+                <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 flex flex-col">
+                    <h1 className="text-2xl sm:text-3xl font-bold mb-4">Problem Not Found</h1>
                     <p className="text-gray-400">The requested classic problem could not be found.</p>
                 </div>
             </div>
@@ -24,11 +24,11 @@ const ClassicProblemDetail = () => {
     }
 
     return (
-        <div className="w-full flex flex-col items-center justify-center py-20">
-            <div className="w-[1300px] flex flex-col">
+        <div className="w-full flex flex-col items-center justify-center py-8 sm:py-12 lg:py-20">
+            <div className="max-w-7xl w-full px-4 sm:px-6 lg:px-8 flex flex-col">
                 {/* Problem Header */}
-                <div className="mb-8">
-                    <div className="flex items-start gap-3 mb-4">
+                <div className="mb-6 sm:mb-8">
+                    <div className="flex flex-wrap items-start gap-3 mb-4">
                         <span className="bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full text-sm font-medium">
                             Classic Problem
                         </span>
@@ -40,8 +40,8 @@ const ClassicProblemDetail = () => {
                             {problem.difficulty}
                         </span>
                     </div>
-                    <h1 className="text-4xl font-bold mb-4">{problem.name}</h1>
-                    <p className="text-xl text-gray-300 mb-6">{problem.description}</p>
+                    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">{problem.name}</h1>
+                    <p className="text-lg sm:text-xl text-gray-300 mb-6">{problem.description}</p>
                     
                     <div className="flex flex-wrap gap-2">
                         {problem.techniques.map((technique, index) => (
