@@ -1,27 +1,8 @@
 export const solutions =
-    {
-        two_sum: {
-            "brute_force": {
-                "java": `import java.util.HashMap;
-
-class Solution {
-  public static int[] twoSum(int[] nums, int target) {
-      // 1. Iterate over every possible number pair
-      for (int i = 0; i < nums.length; i++) {
-          // j is always ahead of i so that we don't re-evaluate already evaluated sums
-          for (int j = i + 1; j < nums.length; j++) {
-              // 2. Check if a given pair adds up to our target
-              if (nums[i] + nums[j] == target) {
-                  // Return the indices when a pair has been found
-                  return new int[]{i, j};
-              }
-          }
-      }
-      // Return an empty array if no pair is found
-      return new int[]{};
-  }
-}`,
-                "javascript": `var twoSum = function(nums, target) {
+{
+    two_sum: {
+        "brute_force": {
+            "javascript": `var twoSum = function(nums, target) {
         // 1. Iterate over every possible number pair
         for (let i = 0; i < nums.length; i++) {
             // j is always ahead of i so that we don't re-evaluate already evaluated sums
@@ -34,34 +15,9 @@ class Solution {
             }
         }
 };`
-            },
-            "hash_table": {
-                "java": `import java.util.HashMap;
-
-class Solution {
-  public static int[] twoSum(int[] nums, int target) {
-        // Our hash table that stores at which index the number is at
-        HashMap<Integer, Integer> numToIndex = new HashMap<>();
-        
-        // 1. Iterate over every number in the array
-        for (int i = 0; i < nums.length; i++) {
-            // 2. Calculate the complement that would sum to our target
-            int complement = target - nums[i];
-            
-            // 3. Check if that complement is in our hash table
-            if (numToIndex.containsKey(complement)) {
-                return new int[]{numToIndex.get(complement), i};
-            }
-            
-            // 4. Add the current number to our hash table
-            numToIndex.put(nums[i], i);
-        }
-        
-        // If no solution found, return an empty array
-        return new int[]{};
-    }
-}`,
-                "javascript": `var twoSum = function(nums, target) {
+        },
+        "hash_table": {
+            "javascript": `var twoSum = function(nums, target) {
         // Our hash table that stores at which index the number is at
         numToIndex = {}
     
@@ -79,25 +35,11 @@ class Solution {
             numToIndex[nums[i]] = i;
         }
 };`
-            },
         },
-        remove_element: {
-            "brute_force": {
-                "java": `public class Solution {
-    public int removeElement(int[] nums, int val) {
-        List<Integer> tmp = new ArrayList<>();
-        for (int num : nums) {
-            if (num != val) {
-                tmp.add(num);
-            }
-        }
-        for (int i = 0; i < tmp.size(); i++) {
-            nums[i] = tmp.get(i);
-        }
-        return tmp.size();
-    }
-}`,
-                "javascript": `class Solution {
+    },
+    remove_element: {
+        "brute_force": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @param {number} val
@@ -116,20 +58,9 @@ class Solution {
         return tmp.length;
     }
 }`
-            },
-            "two_pointers_i": {
-                "java": `public class Solution {
-    public int removeElement(int[] nums, int val) {
-        int k = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != val) {
-                nums[k++] = nums[i];
-            }
-        }
-        return k;
-    }
-}`,
-                "javascript": `class Solution {
+        },
+        "two_pointers_i": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @param {number} val
@@ -145,22 +76,9 @@ class Solution {
         return k;
     }
 }`
-            },
-            "two_pointers_ii": {
-                "java": `public class Solution {
-    public int removeElement(int[] nums, int val) {
-        int i = 0, n = nums.length;
-        while (i < n) {
-            if (nums[i] == val) {
-                nums[i] = nums[--n];
-            } else {
-                i++;
-            }
-        }
-        return n;
-    }
-}`,
-                "javascript": `class Solution {
+        },
+        "two_pointers_ii": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @param {number} val
@@ -178,71 +96,11 @@ class Solution {
         return n;
     }
 }`
-            }
-        },
-        merge_two_sorted_lists: {
-            "recursive_merge": {
-                "java": `// Java program to merge two sorted linked
-// lists recursively
-class Node {
-    int data;
-    Node next;
-
-    Node(int x) {
-        data = x;
-        next = null;
-    }
-}
-
-class GfG {
-
-    // Function to merge two sorted linked lists recursively
-    static Node sortedMerge(Node head1, Node head2) {
-
-        // Base cases
-        if (head1 == null)
-            return head2;
-        if (head2 == null)
-            return head1;
-
-        // Recursive merging based on smaller value
-        if (head1.data <= head2.data) {
-            head1.next = sortedMerge(head1.next, head2);
-            return head1;
         }
-        else {
-            head2.next = sortedMerge(head1, head2.next);
-            return head2;
-        }
-    }
-
-    static void printList(Node curr) {
-        while (curr != null) {
-            System.out.print(curr.data);
-            if (curr.next != null)
-                System.out.print(" ");
-            curr = curr.next;
-        }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-
-        // First linked list: 5 -> 10 -> 15
-        Node head1 = new Node(5);
-        head1.next = new Node(10);
-        head1.next.next = new Node(15);
-
-        // Second linked list: 2 -> 3 -> 20
-        Node head2 = new Node(2);
-        head2.next = new Node(3);
-        head2.next.next = new Node(20);
-
-        Node res = sortedMerge(head1, head2);
-        printList(res);
-    }
-}`,
-                "javascript": `// Javascript program to merge two sorted
+    },
+    merge_two_sorted_lists: {
+        "recursive_merge": {
+            "javascript": `// Javascript program to merge two sorted
 // linked lists recursively
 class Node {
     constructor(x) {
@@ -295,87 +153,9 @@ head2.next.next = new Node(20);
 
 let res = sortedMerge(head1, head2);
 printList(res);`
-            },
-            "iterative_merge": {
-                "java": `// Java program to merge two sorted linked 
-// lists iteratively
-class Node {
-    int data;
-    Node next;
-
-    Node(int x) {
-        data = x;
-        next = null;
-    }
-}
-
-class GfG {
-
-    // Function to merge two sorted linked 
-    // lists iteratively
-    static Node sortedMerge(Node head1,
-                                       Node head2) {
-
-        // Create a dummy node to simplify 
-        // the merging process
-        Node dummy = new Node(-1);
-        Node curr = dummy;
-
-        // Iterate through both linked lists
-        while (head1 != null && head2 != null) {
-          
-            // Add the smaller node to the merged list
-            if (head1.data <= head2.data) {
-                curr.next = head1;
-                head1 = head1.next;
-            } else {
-                curr.next = head2;
-                head2 = head2.next;
-            }
-            curr = curr.next;
-        }
-
-        // If any list is left, append it to 
-        // the merged list
-        if (head1 != null) {
-            curr.next = head1;
-        } else {
-            curr.next = head2;
-        }
-
-        // Return the merged list starting from 
-        // the next of dummy node
-        return dummy.next;
-    }
-
-    static void printList(Node head) {
-        while (head != null) {
-            System.out.print(head.data);
-            if (head.next != null)
-                System.out.print(" ");
-            head = head.next;
-        }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-
-        // First linked list: 5 -> 10 -> 15 -> 40
-        Node head1 = new Node(5);
-        head1.next = new Node(10);
-        head1.next.next = new Node(15);
-        head1.next.next.next = new Node(40);
-
-        // Second linked list: 2 -> 3 -> 20
-        Node head2 = new Node(2);
-        head2.next = new Node(3);
-        head2.next.next = new Node(20);
-
-        Node res = sortedMerge(head1, head2);
-        printList(res);
-    }
-}`,
-                "javascript": `// JavaScript program to merge two sorted
+        },
+        "iterative_merge": {
+            "javascript": `// JavaScript program to merge two sorted
 // linked lists iteratively
 class Node {
     constructor(x) {
@@ -446,61 +226,64 @@ head2.next.next = new Node(20);
 
 let res = sortedMerge(head1, head2);
 printList(res);`
-            }
-        },
-        valid_parentheses: {
-            "stack": {
-                "javascript": `// Javascript program to check if parentheses are balanced
-function isValid(s) {
-
-    // Declare a stack to store the opening brackets
-    let st = [];
-    for (let i = 0; i < s.length; i++) {
-    
-        // Check if the character is an opening bracket
-        if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
-            st.push(s[i]);
-        } else {
-        
-            // If it's a closing bracket, check if the stack is non-empty
-            // and if the top of the stack is a matching opening bracket
-            if (st.length > 0 &&
-                ((st[st.length - 1] === '(' && s[i] === ')') ||
-                 (st[st.length - 1] === '{' && s[i] === '}') ||
-                 (st[st.length - 1] === '[' && s[i] === ']'))) {
-
-                // Pop the matching opening bracket
-                st.pop(); 
-            } else {
- 
-                // Unmatched closing bracket
-                return false; 
-            }
         }
-    }
-    
-    // If stack is empty, return true, otherwise false
-    return st.length === 0;
-}`
-            },
-            "brute_force": {
-                "javascript": `/**
+    },
+    valid_parentheses: {
+        "stack": {
+            "javascript": `class Solution {
+    /**
      * @param {string} s
      * @return {boolean}
      */
     isValid(s) {
-        while (s.includes("()") || s.includes("{}") || s.includes("[]")) {
-            s = s.replace("()", "");
-            s = s.replace("{}", "");
-            s = s.replace("[]", "");
+        const stack = []; // Initialize an empty stack
+        // Map of closing brackets to their corresponding opening brackets
+        const closeToOpen = {
+            ')': '(',
+            ']': '[',
+            '}': '{'
+        };
+
+        // Iterate through each character in the string
+        for (let c of s) {
+            // If the character is a closing bracket
+            if (closeToOpen[c]) {
+                // Check if the stack is not empty and the top of the stack matches the corresponding opening bracket
+                // If it matches, pop the top of the stack; otherwise, return false
+                if (stack.length > 0 && stack[stack.length - 1] === closeToOpen[c]) { 
+                    stack.pop();
+                } else {
+                    return false;
+                }
+            } else {
+                stack.push(c);
+            }
         }
-        return s === "";
-    }`
-            },
+        return stack.length === 0; // If the stack is empty, all brackets were matched correctly
+    }
+}`
         },
-        backspace_string_compare: {
-            "stack": {
-                "javascript": `/**
+        "brute_force": {
+            "javascript": `class Solution {
+    /**
+     * @param {string} s
+     * @return {boolean}
+     */
+    isValid(s) {
+        
+        while (s.includes("()") || s.includes("{}") || s.includes("[]")) { // Keep removing pairs until none are left
+            s = s.replace("()", ""); // Remove all pairs of parentheses
+            s = s.replace("{}", ""); // Remove all pairs of curly braces
+            s = s.replace("[]", ""); // Remove all pairs of square brackets
+        }
+        return s === ""; // If the string is empty, all pairs were matched and removed
+    }
+}`
+        },
+    },
+    backspace_string_compare: {
+        "stack": {
+            "javascript": `/**
  * @param {string} s
  * @param {string} t
  * @return {boolean}
@@ -536,9 +319,9 @@ var backspaceCompare = function (s, t) {
 
     return true;
 };`
-            },
-            "two_pointers": {
-                "javascript": `/**
+        },
+        "two_pointers": {
+            "javascript": `/**
  * @param {string} s
  * @param {string} t
  * @return {boolean}
@@ -585,11 +368,11 @@ var backspaceCompare = function (s, t) {
 
     return true;
 };`
-            }
-        },
-        baseball_game: {
-            "stack": {
-                "javascript": `/**
+        }
+    },
+    baseball_game: {
+        "stack": {
+            "javascript": `/**
  * @param {string[]} operations
  * @return {number}
  */
@@ -627,11 +410,11 @@ var calPoints = function (operations) {
 
     return sum;
 };`
-            }
-        },
-        first_unique_character_in_a_string: {
-            "queue_frequency": {
-                "javascript": `/**
+        }
+    },
+    first_unique_character_in_a_string: {
+        "queue_frequency": {
+            "javascript": `/**
  * @param {string} s
  * @return {number}
  */
@@ -664,12 +447,75 @@ var firstUniqChar = function (s) {
 
     // Return the result
     return queue.length === 0 ? -1 : queue[0][1];
-};`
-            }
+};`,
         },
-        number_of_recent_calls: {
-            "queue": {
-                "javascript": `class RecentCounter {
+        "hash_map": {
+            "javascript": `class Solution {
+    /**
+     * @param {string} s
+     * @return {number}
+     */
+    firstUniqChar(s) {
+        const count = new Map();
+        for (const c of s) {
+            count.set(c, (count.get(c) || 0) + 1);
+        }
+
+        for (let i = 0; i < s.length; i++) {
+            if (count.get(s[i]) === 1) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}`
+        },
+        "brute_force": {
+            "javascript": `class Solution {
+    /**
+     * @param {string} s
+     * @return {number}
+     */
+    firstUniqChar(s) {
+        for (let i = 0; i < s.length; i++) {
+            let flag = true;
+            for (let j = 0; j < s.length; j++) {
+                if (i === j) continue;
+                if (s[i] === s[j]) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) return i;
+        }
+        return -1;
+    }
+}`
+        },
+        "iteration": {
+            "javascript": `class Solution {
+    /**
+     * @param {string} s
+     * @return {number}
+     */
+    firstUniqChar(s) {
+        let res = s.length;
+
+        for (let ch = 'a'.charCodeAt(0); ch <= 'z'.charCodeAt(0); ch++) {
+            const char = String.fromCharCode(ch);
+            const firstIndex = s.indexOf(char);
+            if (firstIndex !== -1 && s.lastIndexOf(char) === firstIndex) {
+                res = Math.min(res, firstIndex);
+            }
+        }
+
+        return res === s.length ? -1 : res;
+    }
+}`}
+    },
+    number_of_recent_calls: {
+        "queue": {
+            "javascript": `class RecentCounter {
     constructor() {
         this.queue = [];
     }
@@ -694,11 +540,11 @@ var firstUniqChar = function (s) {
  * var obj = new RecentCounter();
  * var param_1 = obj.ping(t);
  */`
-            }
-        },
-        three_sum: {
-            "brute_force": {
-                "javascript": `class Solution {
+        }
+    },
+    three_sum: {
+        "brute_force": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @return {number[][]}
@@ -718,9 +564,9 @@ var firstUniqChar = function (s) {
         return Array.from(res).map(item => JSON.parse(item));
     }
 }`
-            },
-            "hash_map": {
-                "javascript": `class Solution {
+        },
+        "hash_map": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @return {number[][]}
@@ -754,9 +600,9 @@ var firstUniqChar = function (s) {
         return res;
     }
 }`
-            },
-            "two_pointers": {
-                "javascript": `class Solution {
+        },
+        "two_pointers": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @return {number[][]}
@@ -790,11 +636,11 @@ var firstUniqChar = function (s) {
         return res;
     }
 }`
-            }
-        },
-        two_sum_ii: {
-            "brute_force": {
-                "javascript": `class Solution {
+        }
+    },
+    two_sum_ii: {
+        "brute_force": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} numbers
      * @param {number} target
@@ -811,9 +657,9 @@ var firstUniqChar = function (s) {
         return [];
     }
 }`
-            },
-            "binary_search": {
-                "javascript": `class Solution {
+        },
+        "binary_search": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} numbers
      * @param {number} target
@@ -837,9 +683,9 @@ var firstUniqChar = function (s) {
         return [];
     }
 }`
-            },
-            "hash_map": {
-                "javascript": `class Solution {
+        },
+        "hash_map": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} numbers
      * @param {number} target
@@ -857,9 +703,9 @@ var firstUniqChar = function (s) {
         return [];
     }
 }`
-            },
-            "two_pointers": {
-                "javascript": `class Solution {
+        },
+        "two_pointers": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} numbers
      * @param {number} target
@@ -882,11 +728,11 @@ var firstUniqChar = function (s) {
         return [];
     }
 }`
-            }
-        },
-        three_sum_closest: {
-            "brute_force": {
-                "javascript": `class Solution {
+        }
+    },
+    three_sum_closest: {
+        "brute_force": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @param {number} target
@@ -932,9 +778,9 @@ var firstUniqChar = function (s) {
         return closestSum; // Trả về tổng gần nhất sau khi đã duyệt qua tất cả các bộ ba
     }
 }`
-            },
-            "two_pointers": {
-                "javascript": `/**
+        },
+        "two_pointers": {
+            "javascript": `/**
  * @param {number[]} nums - Mảng số nguyên đầu vào.
  * @param {number} target - Giá trị mục tiêu.
  * @return {number} - Tổng của ba số gần nhất với target.
@@ -993,11 +839,11 @@ function threeSumClosestTwoPointers(nums, target) {
     // Sau khi duyệt qua tất cả các bộ ba có thể, trả về tổng gần nhất tìm được.
     return closestSum;
 }`
-            }
-        },
-        four_sum: {
-            "brute_force": {
-                "javascript": `class Solution {
+        }
+    },
+    four_sum: {
+        "brute_force": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @param {number} target
@@ -1023,9 +869,9 @@ function threeSumClosestTwoPointers(nums, target) {
         return Array.from(res).map(JSON.parse);
     }
 }`
-            },
-            "hash_map": {
-                "javascript": `class Solution {
+        },
+        "hash_map": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @param {number} target
@@ -1070,9 +916,9 @@ function threeSumClosestTwoPointers(nums, target) {
         return res;
     }
 }`
-            },
-            "two_pointers": {
-                "javascript": `class Solution {
+        },
+        "two_pointers": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @param {number} target
@@ -1110,9 +956,9 @@ function threeSumClosestTwoPointers(nums, target) {
         return res;
     }
 }`
-            },
-            "k_sum_two_pointers": {
-                "javascript": `class Solution {
+        },
+        "k_sum_two_pointers": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @param {number} target
@@ -1155,11 +1001,11 @@ function threeSumClosestTwoPointers(nums, target) {
         return res;
     }
 }`
-            }
-        },
-        permutations: {
-            "recursion": {
-                "javascript": `class Solution {
+        }
+    },
+    permutations: {
+        "recursion": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @return {number[][]}
@@ -1181,9 +1027,9 @@ function threeSumClosestTwoPointers(nums, target) {
         return res;
     }
 }`
-            },
-            "iteration": {
-                "javascript": `class Solution {
+        },
+        "iteration": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @return {number[][]}
@@ -1204,9 +1050,9 @@ function threeSumClosestTwoPointers(nums, target) {
         return perms;
     }
 }`
-            },
-            "backtracking": {
-                "javascript": `class Solution {
+        },
+        "backtracking": {
+            "javascript": `class Solution {
     /**
      * @param {number[]} nums
      * @return {number[][]}
@@ -1233,7 +1079,7 @@ function threeSumClosestTwoPointers(nums, target) {
         }
     }
 }`
-            }
         }
     }
+}
 

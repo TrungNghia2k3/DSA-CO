@@ -37,8 +37,6 @@ const BubbleSort = () => {
 
             <Title title={"Implementation of bubble sort"}/>
 
-            <CodeBlock language={"java"} code={examples.bubbleSort["example 1"].java}/>
-
             <CodeBlock language={"javascript"} code={examples.bubbleSort["example 1"].javascript}/>
 
             <BlockQuote heading={"Output"} quote={"Sorted array: 11 12 22 25 34 64 90"}/>

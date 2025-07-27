@@ -89,8 +89,6 @@ const Array = () => {
                 <p>Example content...</p>
             </section>
 
-            <CodeBlock language={"java"} code={examples.array["example 1"].java}/>
-
             <CodeBlock language={"javascript"} code={examples.array["example 1"].javascript}/>
 
             <Heading heading={"Declaration of Array"}/>
@@ -98,7 +96,6 @@ const Array = () => {
             <Paragraph
                 content={"Arrays can be declared in various ways in different languages. For better illustration, below are some language-specific array declarations:"}/>
 
-            <CodeBlock language={"java"} code={examples.array["example 2"].java}/>
 
             <CodeBlock language={"javascript"} code={examples.array["example 2"].javascript}/>
 
@@ -129,14 +126,10 @@ const Array = () => {
             <Paragraph
                 content={"We cannot alter or update the size of this array. Here only a fixed size (i,e. the size that is mentioned in square brackets []) of memory will be allocated for storage. In case, we don’t know the size of the array then if we declare a larger size and store a lesser number of elements will result in a wastage of memory or we declare a lesser size than the number of elements then we won’t get enough memory to store all the elements. In such cases, static memory allocation is not preferred."}/>
 
-            <CodeBlock language={"java"} code={examples.array["example 3"].java}/>
-
             <SubHeading subHeading={"2. Dynamic Sized Arrays"}/>
 
             <Paragraph
                 content={"The size of the array changes as per user requirements during execution of code so the coders do not have to worry about sizes. They can add and removed the elements as per the need. The memory is mostly dynamically allocated and de-allocated in these arrays."}/>
-
-            <CodeBlock language={"java"} code={examples.array["example 4"].java}/>
 
             <CodeBlock language={"javascript"} code={examples.array["example 4"].javascript}/>
 
