@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import QuestionCard from '../components/QuestionCard';
 import FilterQuestionAside from "../layouts/FilterQuestionAside.jsx";
 
-const ITEMS_PER_PAGE = 20;
+const ITEMS_PER_PAGE = 30;
 
 const Problem = ({ questions, onQuestionClick }) => {
     const [selectedDifficulties, setSelectedDifficulties] = useState([]);

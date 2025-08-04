@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
-import {sortAlphabetically} from "../utils/utils.js";
+import { sortAlphabetically } from "../utils/utils.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faSearch, faFilter, faTimes} from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faFilter, faTimes } from '@fortawesome/free-solid-svg-icons';
+
+import { category_questions } from '../assets/data/category_questions.js';
 
 const difficultyItems = [
-    {id: 1, name: 'easy'},
-    {id: 2, name: 'medium'},
-    {id: 3, name: 'hard'},
+    { id: 1, name: 'easy' },
+    { id: 2, name: 'medium' },
+    { id: 3, name: 'hard' },
 ];
 
-const categoryItems = [
-    'array', 'string', 'linked list', 'math', 'graph', 'recursion', 'hash table', 'dynamic programming', 'tree',
-    'binary search', 'sorting', 'heap', 'stack', 'queue', 'backtracking', 'greedy', 'bit manipulation',
-    'two pointers', 'sliding window', 'depth first search', 'breadth first search'
-];
+const categoryItems = [...category_questions].sort((a, b) => a.localeCompare(b));
 
-const FilterQuestionAside = ({selectedDifficulties, onDifficultyChange, selectedCategories, onCategoryChange, search, onSearchChange}) => {
+const FilterQuestionAside = ({ selectedDifficulties, onDifficultyChange, selectedCategories, onCategoryChange, search, onSearchChange }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     // Get active filter count for display
@@ -91,11 +89,11 @@ const FilterQuestionAside = ({selectedDifficulties, onDifficultyChange, selected
             {isMobileMenuOpen && (
                 <div className="lg:hidden fixed inset-0 z-50 flex">
                     {/* Backdrop for clicking outside to close */}
-                    <div 
+                    <div
                         className="fixed inset-0 transition-opacity duration-300"
                         onClick={() => setIsMobileMenuOpen(false)}
                     ></div>
-                    
+
                     {/* Modal Content */}
                     <div className="relative bg-default text-white w-full max-w-sm ml-auto h-full overflow-y-auto transform transition-transform duration-300 ease-out translate-x-0">
                         {/* Header */}
@@ -115,7 +113,7 @@ const FilterQuestionAside = ({selectedDifficulties, onDifficultyChange, selected
                                 <FontAwesomeIcon icon={faTimes} />
                             </button>
                         </div>
-                        
+
                         {/* Filter Content */}
                         <div className="p-4">
                             {/* Search questions */}

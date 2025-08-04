@@ -1,11 +1,11 @@
 // Components
+import Bullet from "../../components/Bullet.jsx";
+import CodeBlock from "../../components/CodeBlock.jsx";
+import Heading from "../../components/Heading.jsx";
 import Paragraph from "../../components/Paragraph.jsx";
+import TableOfContents from "../../components/TableOfContents.jsx";
 import ExampleList from "../../components/ExampleList.jsx";
 import ConstraintsBullet from "../../components/ConstraintsBullet.jsx";
-import TableOfContents from "../../components/TableOfContents.jsx";
-import Heading from "../../components/Heading.jsx";
-import CodeBlock from "../../components/CodeBlock.jsx";
-import Bullet from "../../components/Bullet.jsx";
 import References from "../../components/References.jsx";
 
 // Visualizers
@@ -14,38 +14,56 @@ import ThreeSumTwoPointersVisualizer from "../../visualizer/problem/three-sum/Th
 
 // Assets
 import { solutions } from "../../assets/data/solutions.js";
+import { questions } from "../../assets/data/references.js";
 
 const ThreeSum = () => {
+
+    const examples = [
+        {
+            input: 'nums = [-1,0,1,2,-1,-4]',
+            output: '[[-1,-1,2],[-1,0,1]]',
+            explanation: [
+                `nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.`,
+                `nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.`,
+                `nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.`,
+                `The distinct triplets are [-1,0,1] and [-1,-1,2].`,
+                `Notice that the order of the output and the order of the triplets does not matter.`
+            ].join('\n')
+        },
+        {
+            input: 'nums = [0,1,1]',
+            output: '[]',
+            explanation: "The only possible triplet does not sum up to 0."
+        },
+        {
+            input: 'nums = [0,0,0]',
+            output: '[[0,0,0]]',
+            explanation: "The only possible triplet sums up to 0."
+        }
+    ];
+
+    // Constraints can be added here if needed
+    const constraints = [
+        { text: '3 <= nums.length <= 3000', type: 'math' },
+        { text: '-10^5 <= nums[i] <= 10^5', type: 'math' }
+    ];
+
     return (
         <div>
-            <Paragraph
-                content={"Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. Notice that the solution set must not contain duplicate triplets."} />
+            <Paragraph content={"Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0."} />
+
+            <Paragraph content={"Notice that the solution set must not contain duplicate triplets."} />
+
+            <ExampleList examples={examples} />
+
+            <ConstraintsBullet
+                constraints={constraints} />
 
             <TableOfContents items={[
-                { id: 'problem-analysis', title: 'Problem Analysis' },
                 { id: 'approach-1-brute-force', title: 'Approach 1: Brute Force' },
                 { id: 'approach-2-hash-map', title: 'Approach 2: Hash Map' },
-                { id: 'approach-3-two-pointers', title: 'Approach 3: Two Pointers (Optimal)' },
-                { id: 'examples', title: 'Examples' },
-                { id: 'constraints', title: 'Constraints' }
+                { id: 'approach-3-two-pointers', title: 'Approach 3: Two Pointers' }
             ]} />
-
-            <section id="problem-analysis">
-                <Heading heading={"Problem Analysis"} />
-
-                <Paragraph content={"The 3Sum problem is a classic algorithmic challenge that asks us to find all unique triplets in an array that sum to zero. This problem is an extension of the Two Sum problem and introduces several key challenges:"} />
-
-                <Bullet
-                    heading={"Key Challenges:"}
-                    items={[
-                        "Finding all triplets (not just one) that sum to zero",
-                        "Avoiding duplicate triplets in the result",
-                        "Optimizing time complexity from O(n³) brute force",
-                        "Handling edge cases like arrays with fewer than 3 elements"
-                    ]} />
-
-                <Paragraph content={"The problem can be solved using multiple approaches, each with different time and space complexities. Let's explore them from the most straightforward to the most optimal."} />
-            </section>
 
             <section id="approach-1-brute-force">
                 <Heading heading={"Approach 1: Brute Force"} />
@@ -108,7 +126,7 @@ const ThreeSum = () => {
             </section>
 
             <section id="approach-3-two-pointers">
-                <Heading heading={"Approach 3: Two Pointers (Optimal)"} />
+                <Heading heading={"Approach 3: Two Pointers"} />
 
                 <Paragraph content={"The two pointers approach is the most elegant and efficient solution. It leverages the sorted array property to eliminate the need for hash maps while maintaining O(n²) time complexity."} />
 
@@ -148,6 +166,8 @@ const ThreeSum = () => {
 
                 <Paragraph content={"This approach is optimal because it combines the benefits of the sorted array property with the efficiency of two pointers, avoiding the need for additional data structures while maintaining excellent time complexity."} />
             </section>
+
+            <References references={questions.three_sum} />
         </div>
     );
 };

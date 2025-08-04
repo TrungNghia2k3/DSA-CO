@@ -301,5 +301,22 @@ export const questions = {
             url: "https://algo.monster/liteproblems/933",
             source: "AlgoMonster"
         }
+    ],
+    three_sum: [
+        {
+            title: "15. 3Sum",
+            url: "https://algo.monster/liteproblems/15",
+            source: "AlgoMonster"
+        },
+        {
+            title: "Three Sum - Explanation",
+            url: "https://neetcode.io/solutions/3sum",
+            source: "NeetCode"
+        },
+        {
+            title: "15. 3Sum - Leetcode Solution",
+            url: "https://algomap.io/problems/3sum",
+            source: "AlgoMap"
+        }
     ]
 }
